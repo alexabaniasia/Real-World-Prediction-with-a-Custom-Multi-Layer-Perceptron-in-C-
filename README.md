@@ -11,20 +11,27 @@ Intel Image Classification (Kaggle):
 https://www.kaggle.com/datasets/puneet6060/intel-image-classification
 
 - 4 classes: forest, glacier, sea, street
-- 60 or 100 training images per class (from seg_train)
+- Training images are taken from seg_train. In each class folder, the files are
+  sorted by name and the first N are used:
+  - Dataset A: first 60 per class (240 images total)
+  - Dataset B: first 100 per class (400 images total)
 - 40 unseen test images (10 per class, from seg_test)
 - Images resized to 16x16 or 32x32, RGB values scaled to 0..1
 - Random 80/20 train/test split on every run
 
-The dataset is not included in this repository. Download it and arrange the
-training images like this (class folders must contain only image files):
+The images used are included in the `data` folder:
 
 ```
-MyDataset\forest
-MyDataset\glacier
-MyDataset\sea
-MyDataset\street
+data\MyDataset\forest   (100 images)
+data\MyDataset\glacier  (100 images)
+data\MyDataset\sea      (100 images)
+data\MyDataset\street   (100 images)
+data\TestImages\...     (10 images per class)
 ```
+
+To run Dataset B, select `data\MyDataset` in the app. To run Dataset A, make a
+copy of `MyDataset` and keep only the first 60 files (sorted by name) in each
+class folder. Class folders must contain only image files.
 
 ## Requirements
 Windows, Visual Studio, .NET Framework 3.5 (Windows Forms).
