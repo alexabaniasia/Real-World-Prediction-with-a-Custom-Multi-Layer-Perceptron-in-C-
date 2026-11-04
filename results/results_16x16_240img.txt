@@ -1,0 +1,6 @@
+Best hidden = 64
+Test accuracy = 68.8%
+forest: precision 0.75, recall 0.60
+glacier: precision 1.00, recall 0.63
+sea: precision 0.44, recall 0.89
+street: precision 0.70, recall 0.70
